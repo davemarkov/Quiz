@@ -2421,13 +2421,14 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jdk8;2.7.1!jackson-datatype-jdk8.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.13.0!scala-library.jar(src)
-[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.2!joda-time.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.7.1!jackson-databind.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.13.0!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] joda-time#joda-time;2.9.2!joda-time.jar(src)
+[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.7.1!jackson-core.jar(src)
 [debug] 	[NOT REQUIRED] org.joda#joda-convert;1.8.1!joda-convert.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.13.0!scala-library.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-java8-compat_2.13;0.9.0!scala-java8-compat_2.13.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-annotations;2.7.1!jackson-annotations.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.7.1!jackson-core.jar(src)
 [debug] 	[NOT REQUIRED] com.fasterxml.jackson.datatype#jackson-datatype-jsr310;2.7.1!jackson-datatype-jsr310.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.13;2.5.23!akka-actor_2.13.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-stm#scala-stm_2.11;0.7!scala-stm_2.11.jar(src)
@@ -2435,20 +2436,19 @@
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-iteratees_2.11;2.5.3!play-iteratees_2.11.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-json_2.11;2.5.3!play-json_2.11.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-functional_2.11;2.5.3!play-functional_2.11.jar(src)
-[debug] 	[NOT REQUIRED] com.typesafe.play#play-datacommons_2.11;2.5.3!play-datacommons_2.11.jar(src)
-[debug] 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-databind;2.7.1!jackson-databind.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.13.0!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
-[debug] :: resolution report :: resolve 355ms :: artifacts dl 5ms
-[debug] 	report for default#quiz$sources;0.1 compile produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-compile.xml
-[debug] 	report for default#quiz$sources;0.1 runtime produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-runtime.xml
-[debug] 	report for default#quiz$sources;0.1 test produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-test.xml
-[debug] 	report for default#quiz$sources;0.1 provided produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-provided.xml
-[debug] 	report for default#quiz$sources;0.1 optional produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-optional.xml
-[debug] 	report for default#quiz$sources;0.1 compile-internal produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-compile-internal.xml
-[debug] 	report for default#quiz$sources;0.1 runtime-internal produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-runtime-internal.xml
-[debug] 	report for default#quiz$sources;0.1 test-internal produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-test-internal.xml
-[debug] 	report for default#quiz$sources;0.1 plugin produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-plugin.xml
-[debug] 	report for default#quiz$sources;0.1 pom produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-pom.xml
-[debug] 	report for default#quiz$sources;0.1 scala-tool produced in /home/dave/dev/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-scala-tool.xml
-[debug] 	resolve done (355ms resolve - 5ms download)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.13.0!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] com.typesafe.play#play-datacommons_2.11;2.5.3!play-datacommons_2.11.jar(src)
+[debug] :: resolution report :: resolve 148ms :: artifacts dl 9ms
+[debug] 	report for default#quiz$sources;0.1 compile produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-compile.xml
+[debug] 	report for default#quiz$sources;0.1 runtime produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-runtime.xml
+[debug] 	report for default#quiz$sources;0.1 test produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-test.xml
+[debug] 	report for default#quiz$sources;0.1 provided produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-provided.xml
+[debug] 	report for default#quiz$sources;0.1 optional produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-optional.xml
+[debug] 	report for default#quiz$sources;0.1 compile-internal produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-compile-internal.xml
+[debug] 	report for default#quiz$sources;0.1 runtime-internal produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-runtime-internal.xml
+[debug] 	report for default#quiz$sources;0.1 test-internal produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-test-internal.xml
+[debug] 	report for default#quiz$sources;0.1 plugin produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-plugin.xml
+[debug] 	report for default#quiz$sources;0.1 pom produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-pom.xml
+[debug] 	report for default#quiz$sources;0.1 scala-tool produced in /home/dave/Quiz/quiz/target/scala-2.13/resolution-cache/reports/default-quiz$sources-scala-tool.xml
+[debug] 	resolve done (148ms resolve - 9ms download)

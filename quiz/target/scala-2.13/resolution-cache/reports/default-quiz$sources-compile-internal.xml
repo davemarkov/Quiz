@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190708031316"/>
+		date="20190708074834"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-json_2.11">
 			<revision name="2.5.3" status="release" pubdate="20160428033018" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="14">

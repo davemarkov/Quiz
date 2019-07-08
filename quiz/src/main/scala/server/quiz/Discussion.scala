@@ -45,7 +45,7 @@ class Discussion(quiz: Quiz, owner: String, database: ActorRef) extends Actor {
 
   def returnHistory(username: String, user: ActorRef): Unit = {
     val newTask: ActorRef =
-      context.system.actorOf(Props(new Task[DataBaseResponse](self)))
+      context.system.actorOf(Props(new Task(self)))
 
     responseObserver.expect(newTask, (response: DataBaseResponse) => {
       response.data match {

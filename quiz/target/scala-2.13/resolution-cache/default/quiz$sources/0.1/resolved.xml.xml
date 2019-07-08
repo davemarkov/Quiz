@@ -4,7 +4,7 @@
 		module="quiz$sources"
 		revision="0.1"
 		status="integration"
-		publication="20190708031315"
+		publication="20190708074834"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

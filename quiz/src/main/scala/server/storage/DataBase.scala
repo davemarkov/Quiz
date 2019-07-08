@@ -4,13 +4,19 @@ import akka.actor.{Actor, ActorRef}
 import server.quiz.{DiscussionHistory, Quiz}
 import server.user.User
 
+trait DataBase[A] {
+  protected var table: List[A]
+
+  def create(data: A): Unit
+  def select(data: A, flag: Flag): List[A]
+  def delete(data: A): Unit
+  def update(data: A): Unit
+}
 
 trait Flag
 case object MatchAll extends Flag
 case object All extends Flag
 case object Has extends Flag
-
-case object EmptySlot
 
 abstract class StorageData
 
@@ -67,92 +73,5 @@ class QuizDataBase extends Actor {
 
   def respond(to: ActorRef, message: List[StorageData]): Unit = {
     to ! message
-  }
-}
-
-// Mock database
-trait DataBase[A] {
-  protected var table: List[A]
-
-  def create(data: A): Unit
-  def select(data: A, flag: Flag): List[A]
-  def delete(data: A): Unit
-  def update(data: A): Unit
-}
-
-object UsersDB extends DataBase[User] {
-  override var table: List[User] = List()
-
-  override def create(user: User): Unit = {
-    table = user :: table
-  }
-  override def select(user: User, flag: Flag): List[User] = {
-    table.filter(userEntry => {
-      flag match {
-        case MatchAll =>
-          userEntry.username == user.username &&
-            userEntry.password == user.password
-        case Has =>
-          userEntry.username == user.username ||
-            userEntry.password == user.password
-        case All => true
-      }
-    })
-  }
-  override def delete(user: User): Unit = {}
-  override def update(user: User): Unit = {
-    table.map(userEntry => {
-      if (userEntry.username == user.username) {
-        val updatedQuizList = user.quizList ++ userEntry.quizList
-        User(userEntry.username, userEntry.password, updatedQuizList)
-      } else {
-        userEntry
-      }
-    })
-  }
-}
-
-object QuizDB extends DataBase[Quiz] {
-  override var table: List[Quiz] = List()
-
-  override def create(quiz: Quiz): Unit = {
-    table = quiz :: table
-  }
-  override def select(quiz: Quiz, flag: Flag): List[Quiz] = {
-    table.filter(quizEntry => {
-      flag match {
-        case MatchAll =>
-          quizEntry.owner == quiz.owner &&
-            quizEntry.title == quiz.title
-        case Has =>
-          quizEntry.owner == quiz.owner ||
-            quizEntry.title == quiz.title
-        case All => true
-      }
-    })
-  }
-  override def delete(quiz: Quiz): Unit = {}
-  override def update(quiz: Quiz): Unit = {}
-}
-
-object DiscussionDB extends DataBase[DiscussionHistory] {
-  override var table: List[DiscussionHistory] = List()
-
-  override def create(history: DiscussionHistory): Unit = {
-    table = history :: table
-  }
-  override def select(history: DiscussionHistory, flag: Flag): List[DiscussionHistory] = {
-    table.filter(historyEntry => historyEntry.quizName == history.quizName)
-  }
-  override def delete(history: DiscussionHistory): Unit = {}
-  override def update(history: DiscussionHistory): Unit = {
-    table.map(historyEntry => {
-        if (historyEntry.quizName == history.quizName) {
-          val updatedHistory = history.history ++ history.history
-          DiscussionHistory(historyEntry.quizName, updatedHistory)
-        } else {
-          historyEntry
-        }
-    })
   }
 }

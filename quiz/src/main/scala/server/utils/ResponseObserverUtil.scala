@@ -24,14 +24,3 @@ class ResponseObserverUtil[A]() {
   }
 }
 
-class Task[A](parent: ActorRef) extends Actor {
-
-  override def receive: Receive = {
-    case StartTask(task) => task()
-    case EndTask => context.system.terminate()
-    case data =>
-      parent ! data
-      context.system.terminate()
-    case _ => ()
-  }
-}
